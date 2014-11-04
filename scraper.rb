@@ -14,7 +14,7 @@ id = 1
 json = matches.map do | match |
 	ScraperWiki.save_sqlite([:id],
 	{
-	  id: id++,
+		:id => id++,
 		:lat => match[0],
 		:lng => match[1],
 		:icon => match[2],
