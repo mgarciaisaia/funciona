@@ -12,16 +12,7 @@ matches = page.body.scan(/var marker_subgurim_\d+_=_sg\.cs\.createMarker\(\{posi
 
 id = 1
 json = matches.map do | match |
-	ScraperWiki.save_sqlite([:id],
-	{
-		:id => id++,
-		:lat => match[0],
-		:lng => match[1],
-		:icon => match[2],
-		:name => match[3],
-		:status => match[5],
-		:available => match[6]
-	})
+	ScraperWiki.save_sqlite(["id"], { "id" => id++, "lat" => match[0], "lng" => match[1], "icon" => match[2], "name" => match[3], "status" => match[5], "available" => match[6]})
 end
 
 # You don't have to do things with the Mechanize or ScraperWiki libraries. You can use whatever gems are installed
