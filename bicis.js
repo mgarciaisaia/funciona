@@ -69,6 +69,7 @@ $.ajax({
     url: 'https://api.morph.io/utnso/funciona/data.json?key=VqRWxvYWXds%2BZDw3OHHn&query=select%20*%20from%20%27data%27',
     dataType: 'jsonp',
     success: function(data) {
+      document.getElementById('bicis-tabla').innerHTML = "";
       var theTable = document.createElement('table');
       document.getElementById('bicis-tabla').appendChild(theTable);
       for(index in data) {
