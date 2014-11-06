@@ -1,6 +1,6 @@
 $.ajax({
     url: 'http://bitest-mgarciaisaia.rhcloud.com/bicis.json',
-    datatype: 'jsonp',
+    dataType: 'jsonp',
     success: function(data) {
       document.getElementById('bicis-tabla').innerHTML = "";
       var theTable = document.createElement('table');
