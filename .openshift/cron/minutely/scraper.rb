@@ -15,4 +15,4 @@ json = matches.map do | match |
         {"lat" => match[0], "lng" => match[1], "icon" => match[2], "name" => match[3], "status" => match[5], "available" => match[6]}
 end
 
-File.write('../../../public/bicis.json', json.to_json)
+File.write("${ENV['OPENSHIFT_REPO_DIR']}/public/bicis.json", json.to_json)
