@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require 'mechanize'
-require 'scraperwiki'
 
 mechanize = Mechanize.new
 
@@ -12,4 +11,4 @@ json = matches.map do | match |
 	{"lat" => match[0], "lng" => match[1], "icon" => match[2], "name" => match[3], "status" => match[5], "available" => match[6]}
 end
 
-File.write('bicis.json', json)
+File.write('../../../public/bicis.json', json)
